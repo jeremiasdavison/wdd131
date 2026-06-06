@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us | White Water Rafting Co.</title>
+  <meta name="description"
+    content="Get in touch with White Water Rafting Co. Ask questions, request reservations, or send us a message. We are here to help you plan your next river adventure.">
+  <meta name="author" content="Jeremias Davison">
+  <link rel="stylesheet" href="styles/rafting.css">
+</head>
+
+<body>
+
+  <header>
+    <img src="images/logo.png" alt="White Water Rafting Co. Logo" class="logo">
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About Us</a>
+      <a href="trips.html">Trips</a>
+      <a href="contact.html">Contact Us</a>
+    </nav>
+  </header>
+
+  <main>
+
+    <section class="contact-info">
+      <h1>White Water Rafting Company</h1>
+      <address>
+        <p>123 Main River Street</p>
+        <p>Kolob, California</p>
+        <p><a href="tel:+19999999999">+1 999 999 9999</a></p>
+        <p><a href="mailto:info@whitewater.com">info@whitewater.com</a></p>
+      </address>
+    </section>
+
+    <section class="contact-content">
+      <div class="map-container">
+        <iframe
+          title="White Water Rafting Co. Location"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3117.0!2d-113.08!3d37.46!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzfCsDI3JzM2LjAiTiAxMTPCsDA0JzQ4LjAiVw!5e0!3m2!1sen!2sus!4v1680000000000!5m2!1sen!2sus"
+          width="100%"
+          height="350"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+
+      <form class="contact-form" action="#" method="get">
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" placeholder="Your full name" required>
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" placeholder="your@email.com" required>
+        </div>
+
+        <fieldset class="form-group">
+          <legend>Message Purpose</legend>
+          <label class="radio-label" for="purpose-general">
+            <input type="radio" id="purpose-general" name="purpose" value="general" checked>
+            General Inquiry
+          </label>
+          <label class="radio-label" for="purpose-reservation">
+            <input type="radio" id="purpose-reservation" name="purpose" value="reservation">
+            Reservation Question
+          </label>
+          <label class="radio-label" for="purpose-website">
+            <input type="radio" id="purpose-website" name="purpose" value="website">
+            Website Suggestion
+          </label>
+        </fieldset>
+
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="5" placeholder="Type here" required></textarea>
+        </div>
+
+        <div class="form-group checkbox-group">
+          <label class="checkbox-label" for="newsletter">
+            <input type="checkbox" id="newsletter" name="newsletter" value="yes">
+            Please subscribe me to the monthly newsletter
+          </label>
+        </div>
+
+        <button type="submit" class="submit-btn">Get in Touch!</button>
+      </form>
+    </section>
+
+    <section class="team-section">
+      <h2>We Are Here to Serve You</h2>
+      <div class="team-grid">
+        <figure class="employee-card">
+          <img src="images/profile1.jpg" alt="Photo of Sarah Mitchell, Lead Guide">
+          <figcaption>
+            <strong>Sarah Mitchell</strong><br>
+            Lead River Guide
+          </figcaption>
+        </figure>
+        <figure class="employee-card">
+          <img src="images/profile1.jpg" alt="Photo of Carlos Rivera, Safety Officer">
+          <figcaption>
+            <strong>Carlos Rivera</strong><br>
+            Safety Officer
+          </figcaption>
+        </figure>
+        <figure class="employee-card">
+          <img src="images/profile1.jpg" alt="Photo of Dana Lee, Trip Coordinator">
+          <figcaption>
+            <strong>Dana Lee</strong><br>
+            Trip Coordinator
+          </figcaption>
+        </figure>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>&copy; 2026 White Water Rafting Co. | Jeremias Davison</p>
+    <nav class="socialmedia">
+      <a href="https://facebook.com" target="_blank">
+        <img src="images/facebook.svg" alt="Facebook">
+      </a>
+      <a href="https://twitter.com" target="_blank">
+        <img src="images/twitter.svg" alt="Twitter">
+      </a>
+      <a href="https://instagram.com" target="_blank">
+        <img src="images/instagram.svg" alt="Instagram">
+      </a>
+    </nav>
+  </footer>
+
+</body>
+
+</html>

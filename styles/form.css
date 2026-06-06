@@ -1,0 +1,214 @@
+/* =============================================
+   WDD 131 – form.css – Jeremías Davison
+   ============================================= */
+
+/* ---------- Form Wrapper ---------- */
+.form-wrapper {
+  max-width: 540px;
+  margin: 0 auto;
+}
+
+.form-wrapper h1 {
+  font-family: var(--font-heading);
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--color-white);
+  text-align: center;
+  background-color: var(--color-primary);
+  padding: 1rem 1.5rem;
+  border-radius: var(--radius) var(--radius) 0 0;
+  letter-spacing: 0.02em;
+  margin-bottom: 0;
+}
+
+form {
+  background-color: var(--color-surface);
+  border-radius: 0 0 var(--radius) var(--radius);
+  box-shadow: var(--shadow-card);
+  padding: 1.75rem 2rem 2rem;
+}
+
+/* ---------- Field Group ---------- */
+.field-group {
+  margin-bottom: 1.4rem;
+  border: none;
+  padding: 0;
+}
+
+.field-group label,
+.field-group legend {
+  display: block;
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--color-text);
+  margin-bottom: 0.45rem;
+  width: 100%;
+  padding: 0;
+}
+
+.field-group legend {
+  margin-bottom: 0.6rem;
+}
+
+/* ---------- Placeholder contrast (CSS Overview AA compliance) ---------- */
+.field-group input::placeholder,
+.field-group textarea::placeholder {
+  color: var(--color-placeholder);
+  opacity: 1;
+}
+
+/* ---------- Inputs, Select & Textarea ---------- */
+.field-group select,
+.field-group input[type="date"],
+.field-group input[type="text"],
+.field-group textarea {
+  width: 100%;
+  padding: 0.55rem 0.85rem;
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  color: var(--color-text);
+  background-color: var(--color-input-bg);
+  border: 1.5px solid var(--color-border);
+  border-radius: var(--radius);
+  transition: border-color var(--transition), box-shadow var(--transition);
+  outline: none;
+}
+
+.field-group select:focus,
+.field-group input[type="date"]:focus,
+.field-group input[type="text"]:focus,
+.field-group textarea:focus {
+  border-color: var(--color-secondary);
+  box-shadow: 0 0 0 3px rgba(45, 106, 159, 0.15);
+  background-color: var(--color-surface);
+}
+
+.field-group textarea {
+  resize: vertical;
+  min-height: 110px;
+}
+
+/* ---------- Required / Optional Marks ---------- */
+.required-mark {
+  color: var(--color-error);
+  margin-left: 2px;
+}
+
+.optional-mark {
+  font-weight: 400;
+  font-size: 0.82rem;
+  color: var(--color-optional);
+  margin-left: 4px;
+}
+
+/* ---------- Star Rating ---------- */
+.rating-row {
+  display: flex;
+  gap: 0.6rem;
+  align-items: flex-end;
+  flex-wrap: wrap;
+}
+
+.rating-option {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.rating-option label {
+  font-size: 1rem;
+  color: var(--color-accent);
+  letter-spacing: -1px;
+  cursor: pointer;
+  margin-bottom: 0;
+  transition: color var(--transition), transform var(--transition);
+  white-space: nowrap;
+}
+
+.rating-option label:hover {
+  color: var(--color-accent-dark);
+  transform: scale(1.1);
+}
+
+.rating-option input[type="radio"] {
+  accent-color: var(--color-secondary);
+  width: 1rem;
+  height: 1rem;
+  cursor: pointer;
+}
+
+/* ---------- Checkboxes ---------- */
+.checkbox-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding-left: 0.1rem;
+}
+
+.checkbox-label {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  font-size: 0.95rem;
+  font-weight: 400;
+  color: var(--color-text);
+  cursor: pointer;
+  margin-bottom: 0;
+}
+
+.checkbox-label input[type="checkbox"] {
+  accent-color: var(--color-secondary);
+  width: 1rem;
+  height: 1rem;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+/* ---------- Submit Button ---------- */
+input[type="submit"] {
+  display: block;
+  width: 100%;
+  padding: 0.75rem;
+  margin-top: 0.5rem;
+  font-family: var(--font-body);
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--color-white);
+  background-color: var(--color-primary);
+  border: none;
+  border-radius: var(--radius);
+  cursor: pointer;
+  letter-spacing: 0.03em;
+  transition: background-color var(--transition), transform var(--transition);
+}
+
+input[type="submit"]:hover {
+  background-color: var(--color-secondary);
+  transform: translateY(-1px);
+}
+
+input[type="submit"]:active {
+  transform: translateY(0);
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 600px) {
+  form {
+    padding: 1.25rem 1.1rem 1.5rem;
+  }
+
+  .form-wrapper h1 {
+    font-size: 1.45rem;
+  }
+
+  .rating-row {
+    gap: 0.4rem;
+  }
+
+  .rating-option label {
+    font-size: 0.9rem;
+    letter-spacing: -2px;
+  }
+}

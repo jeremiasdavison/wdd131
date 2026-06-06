@@ -1,0 +1,47 @@
+/* =============================================
+   WDD 131 – review.css – Jeremías Davison
+   ============================================= */
+
+.confirmation-card {
+  background-color: var(--color-surface);
+  border-radius: 0 0 var(--radius) var(--radius);
+  box-shadow: var(--shadow-card);
+  padding: 2.5rem 2rem;
+  text-align: center;
+}
+
+.confirmation-msg {
+  font-size: 1.1rem;
+  color: var(--color-text);
+  margin-bottom: 1rem;
+}
+
+.review-count {
+  font-size: 0.95rem;
+  color: var(--color-muted);
+  margin-bottom: 1.75rem;
+}
+
+.review-count strong {
+  color: var(--color-secondary);
+  font-size: 1.05rem;
+}
+
+.back-link {
+  display: inline-block;
+  padding: 0.65rem 1.5rem;
+  background-color: var(--color-primary);
+  color: #ffffff;
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 0.95rem;
+  border-radius: var(--radius);
+  text-decoration: none;
+  transition: background-color var(--transition), transform var(--transition);
+}
+
+.back-link:hover {
+  background-color: var(--color-secondary);
+  color: #ffffff;
+  transform: translateY(-1px);
+}

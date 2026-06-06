@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(mv \"jairo-gonzalez-hB2R47qB8yA-unsplash.jpg\" \"history.jpg\")",
+      "Bash(mv \"bobby-tUZUrzfjVok-unsplash.jpg\" \"adventure1.jpg\")",
+      "Bash(mv \"jefferson-sees-aqJqJ6qUauE-unsplash.jpg\" \"adventure2.jpg\")",
+      "Bash(mv \"erik-fabian-XDc2XwbSrN0-unsplash.jpg\" \"adventure3.jpg\")",
+      "Bash(mv \"josip-ivankovic-t8jGO76Rvag-unsplash.jpg\" \"adventure4.jpg\")"
+    ]
+  }
+}

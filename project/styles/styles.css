@@ -1,0 +1,228 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #111827;
+  color: #f9fafb;
+  font-family: 'Source Sans 3', sans-serif;
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+header {
+  background-color: #1f2937;
+  padding: 1rem 2rem;
+  border-bottom: 3px solid #4f46e5;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+header .logo {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #4f46e5;
+}
+
+header p {
+  color: #9ca3af;
+  font-size: 0.9rem;
+}
+
+main {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem;
+}
+
+h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  color: #f9fafb;
+  margin-bottom: 2rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid #4f46e5;
+}
+
+h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.4rem;
+  color: #4f46e5;
+  margin-bottom: 0.75rem;
+}
+
+h3 {
+  font-family: 'Source Sans 3', sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #9ca3af;
+  margin-bottom: 0.5rem;
+}
+
+p {
+  margin-bottom: 0.75rem;
+  color: #f9fafb;
+}
+
+ul {
+  padding-left: 1.5rem;
+  margin-bottom: 0.75rem;
+}
+
+li {
+  margin-bottom: 0.5rem;
+  color: #f9fafb;
+}
+
+section {
+  background-color: #1f2937;
+  border-left: 4px solid #4f46e5;
+  border-radius: 6px;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+/* Color Schema */
+.color-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 0.75rem;
+}
+
+.color-box {
+  border-radius: 6px;
+  padding: 0.75rem 1rem;
+  min-width: 140px;
+  flex: 1;
+  color: #f9fafb;
+  border: 1px solid #374151;
+}
+
+.color-box p {
+  color: inherit;
+  font-size: 0.85rem;
+  margin-bottom: 0.25rem;
+}
+
+.color-box p:first-child {
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+/* Typography */
+.font-example {
+  margin-bottom: 1.25rem;
+}
+
+.font-label {
+  color: #9ca3af;
+  font-size: 0.85rem;
+  margin-bottom: 0.25rem;
+}
+
+.demo-heading {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 0;
+}
+
+.demo-body {
+  font-family: 'Source Sans 3', sans-serif;
+  font-size: 1.2rem;
+  margin-bottom: 0;
+}
+
+/* Wireframes */
+.wireframe-row {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+}
+
+.wireframe-box {
+  flex: 1;
+  min-width: 220px;
+}
+
+.wf {
+  border: 2px solid #374151;
+  border-radius: 6px;
+  padding: 0.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  background-color: #111827;
+}
+
+.wf-bar {
+  background-color: #374151;
+  color: #9ca3af;
+  font-size: 0.72rem;
+  text-align: center;
+  padding: 0.35rem;
+  border-radius: 3px;
+}
+
+.wf-tall {
+  background-color: #2d3748;
+  color: #9ca3af;
+  font-size: 0.72rem;
+  text-align: center;
+  padding: 1.5rem 0.5rem;
+  border-radius: 3px;
+  border: 1px dashed #4f46e5;
+}
+
+.wf-two-col {
+  display: flex;
+  gap: 0.4rem;
+}
+
+.wf-two-col .wf-tall {
+  flex: 2;
+}
+
+.wf-stack {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  justify-content: space-between;
+}
+
+.wf-three-col {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.4rem;
+}
+
+footer {
+  text-align: center;
+  padding: 1.25rem;
+  color: #9ca3af;
+  font-size: 0.85rem;
+  border-top: 1px solid #1f2937;
+}
+
+@media (max-width: 600px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.25rem;
+  }
+
+  .wireframe-row {
+    flex-direction: column;
+  }
+
+  .wf-grid-3 {
+    grid-template-columns: 1fr;
+  }
+}

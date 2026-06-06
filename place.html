@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Argentina – Country Page – Jeremías Davison</title>
+  <meta name="description"
+    content="WDD 131 W03 Country Page. Argentina overview with current weather and wind chill factor by Jeremías Davison.">
+  <meta name="author" content="Jeremías Davison">
+  <link rel="stylesheet" href="styles/country.css">
+  <link rel="stylesheet" href="styles/country-large.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Source+Sans+3:wght@300;400;600&display=swap"
+    rel="stylesheet">
+  <script src="scripts/country.js" defer></script>
+</head>
+
+<body>
+
+  <header>
+    <span class="site-title">Country Page</span>
+    <nav aria-label="Primary">
+      <a href="index.html">Home</a>
+      <a href="place.html" class="active" aria-current="page">Argentina</a>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Argentina</h1>
+
+    <picture class="hero">
+      <source media="(min-width: 960px)" srcset="images/argentina-large.webp" type="image/webp">
+      <source media="(min-width: 500px)" srcset="images/argentina-medium.webp" type="image/webp">
+      <img src="images/argentina-small.webp" alt="View of Buenos Aires, Argentina" width="1200"
+        height="675">
+    </picture>
+
+    <section class="info">
+      <h2>About Argentina</h2>
+      <p>Argentina is the second largest country in South America, known for its diverse landscapes,
+        from the Andes mountains to the Pampas plains and the Patagonian steppe. Buenos Aires, the
+        capital, blends European architecture with vibrant Latin American culture.</p>
+    </section>
+
+    <section class="weather">
+      <h2>Current Weather <span class="emoticon" aria-hidden="true"></span></h2>
+
+      <svg class="weather-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img"
+        aria-label="Partly cloudy weather icon">
+        <circle cx="22" cy="24" r="10" fill="#f5b301"></circle>
+        <path
+          d="M44 40c0-6-4-10-10-10-1 0-2 0-3 .3C29 25 24 22 19 22c-7 0-12 5-12 12 0 1 0 2 .3 3C4 38 2 41 2 44c0 5 4 9 9 9h35c5 0 9-4 9-9 0-3-2-6-5-7 0-1 .1-2 .1-3 0-7-5-12-12-12-2 0-4 .5-6 1.5z"
+          fill="#cfd8dc"></path>
+      </svg>
+
+      <ul class="weather-data">
+        <li>City: <span id="city">Buenos Aires</span></li>
+        <li>Temperature: <span id="temp">5</span> &deg;C</li>
+        <li>Wind Speed: <span id="wind">15</span> km/h</li>
+        <li>Wind Chill: <span id="windchill">N/A</span></li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>&#169;<span id="currentyear"></span> Jeremías Davison &ndash; Buenos Aires, Argentina</p>
+    <p id="lastModified"></p>
+  </footer>
+
+</body>
+
+</html>

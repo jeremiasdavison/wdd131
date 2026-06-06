@@ -1,0 +1,344 @@
+/* =============================================
+   WDD 131 – Dynamic Web Fundamentals
+   base.css – Jeremías Davison
+   ============================================= */
+
+/* ---------- CSS Variables ---------- */
+:root {
+  --color-primary:    #1a3a5c;   /* deep navy */
+  --color-secondary:  #2d6a9f;   /* medium blue */
+  --color-accent:     #e8a020;   /* warm gold */
+  --color-bg:         #f4f6f9;   /* light grey-blue */
+  --color-surface:    #ffffff;
+  --color-text:       #1e2d3d;
+  --color-muted:      #5a6a7a;
+  --color-link:       #2d6a9f;
+  --color-link-hover: #e8a020;
+
+  --color-input-bg:    #f8fafc;
+  --color-border:      #c5d3e0;
+  --color-placeholder: #6b7a8d;
+  --color-optional:    #4a5a6a;
+  --color-accent-dark: #c47c10;
+  --color-error:       #c0392b;
+  --color-white:       #ffffff;
+
+  --font-heading: 'Playfair Display', Georgia, serif;
+  --font-body:    'Source Sans 3', 'Helvetica Neue', sans-serif;
+
+  --radius:     8px;
+  --shadow:     0 2px 12px rgba(26, 58, 92, 0.10);
+  --shadow-card: 0 4px 20px rgba(26, 58, 92, 0.12);
+  --transition: 0.25s ease;
+  --max-width:  960px;
+}
+
+/* ---------- Reset & Base ---------- */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  font-weight: 400;
+  color: var(--color-text);
+  background-color: var(--color-bg);
+  line-height: 1.7;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  color: var(--color-link);
+  text-decoration: none;
+  transition: color var(--transition);
+}
+
+a:hover {
+  color: var(--color-link-hover);
+}
+
+/* ---------- Header ---------- */
+header {
+  background-color: var(--color-primary);
+  color: #ffffff;
+  padding: 0.5rem 2rem;
+  text-align: center;
+}
+
+#course-title {
+  display: block;
+  font-family: var(--font-heading);
+  font-size: 1.1rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  padding: 0.8rem 0 0.5rem;
+  color: #d0e4f7;
+}
+
+/* ---------- Navigation ---------- */
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 0.25rem;
+  padding: 0.4rem 0 0.6rem;
+  flex-wrap: wrap;
+}
+
+nav a {
+  color: #c8ddf0;
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 0.95rem;
+  letter-spacing: 0.03em;
+  padding: 0.45rem 1.1rem;
+  border-radius: var(--radius);
+  position: relative;
+  transition: color var(--transition), background-color var(--transition), transform var(--transition);
+}
+
+nav a::after {
+  content: '';
+  position: absolute;
+  bottom: 4px;
+  left: 1.1rem;
+  right: 1.1rem;
+  height: 2px;
+  background-color: var(--color-accent);
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform var(--transition);
+}
+
+nav a:hover {
+  color: #ffffff;
+  background-color: rgba(255,255,255,0.08);
+  transform: translateY(-1px);
+}
+
+nav a:hover::after {
+  transform: scaleX(1);
+}
+
+/* ---------- Main ---------- */
+main {
+  max-width: var(--max-width);
+  width: 100%;
+  margin: 2.5rem auto;
+  padding: 0 1.5rem;
+  flex: 1;
+}
+
+main h1 {
+  font-family: var(--font-heading);
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  text-align: center;
+  margin-bottom: 2rem;
+  letter-spacing: 0.01em;
+}
+
+/* ---------- Cards Grid ---------- */
+.cards-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 1.5rem;
+  align-items: start;
+}
+
+/* ---------- Card ---------- */
+.card {
+  background-color: var(--color-surface);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-card);
+  overflow: hidden;
+}
+
+.card h2 {
+  font-family: var(--font-heading);
+  font-size: 1.05rem;
+  font-weight: 600;
+  background-color: var(--color-primary);
+  color: #ffffff;
+  padding: 0.75rem 1.25rem;
+  letter-spacing: 0.02em;
+  text-align: center;
+}
+
+.card-content {
+  display: flex;
+  gap: 1.25rem;
+  padding: 1.25rem 1.25rem 1rem;
+  align-items: flex-start;
+}
+
+.about-text p {
+  font-size: 0.95rem;
+  color: var(--color-text);
+  line-height: 1.75;
+}
+
+.card-content img {
+  width: 140px;
+  height: 140px;
+  object-fit: cover;
+  border-radius: var(--radius);
+  flex-shrink: 0;
+  border: 3px solid var(--color-bg);
+  box-shadow: var(--shadow);
+}
+
+/* ---------- City Section ---------- */
+.city-section {
+  border-top: 1px solid var(--color-bg);
+  padding: 1rem 1.25rem 1.25rem;
+}
+
+.city-section h3 {
+  font-family: var(--font-heading);
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--color-secondary);
+  text-align: center;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid #e0e8f0;
+  padding-bottom: 0.5rem;
+}
+
+.city-content {
+  display: flex;
+  gap: 1.25rem;
+  align-items: flex-start;
+}
+
+.city-content p {
+  font-size: 0.93rem;
+  color: var(--color-text);
+  line-height: 1.75;
+}
+
+.city-content figure {
+  flex-shrink: 0;
+  text-align: center;
+}
+
+.city-content figure img {
+  width: 110px;
+  border: 1px solid #dde5ee;
+  border-radius: 4px;
+}
+
+.city-content figcaption {
+  font-size: 0.78rem;
+  color: var(--color-muted);
+  margin-top: 0.35rem;
+  font-style: italic;
+}
+
+/* ---------- Resource List ---------- */
+.resource-list {
+  list-style: none;
+  padding: 1.25rem 1.25rem;
+}
+
+.resource-list li {
+  border-bottom: 1px solid #eef2f7;
+  padding: 0.6rem 0;
+}
+
+.resource-list li:last-child {
+  border-bottom: none;
+}
+
+.resource-list a {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--color-link);
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  transition: color var(--transition), padding-left var(--transition);
+}
+
+.resource-list a::before {
+  content: '›';
+  color: var(--color-accent);
+  font-size: 1.1rem;
+  font-weight: 700;
+  transition: transform var(--transition);
+}
+
+.resource-list a:hover {
+  color: var(--color-primary);
+  padding-left: 6px;
+}
+
+.resource-list a:hover::before {
+  transform: translateX(3px);
+}
+
+/* ---------- Footer ---------- */
+footer {
+  background-color: var(--color-primary);
+  color: #c8ddf0;
+  text-align: center;
+  padding: 1.1rem 1.5rem;
+  font-size: 0.88rem;
+  line-height: 1.8;
+}
+
+footer p {
+  margin: 0.15rem 0;
+}
+
+#lastModified {
+  color: #f0c060;
+  font-size: 0.88rem;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 720px) {
+  .cards-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .card-content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .city-content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  main h1 {
+    font-size: 1.8rem;
+  }
+
+  nav {
+    gap: 0.1rem;
+  }
+
+  nav a {
+    font-size: 0.85rem;
+    padding: 0.4rem 0.7rem;
+  }
+}
