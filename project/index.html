@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Pulse – Latest AI News</title>
+  <meta name="description" content="AI Pulse curates the most important artificial intelligence news — model releases, research breakthroughs, policy updates, and new tools.">
+  <meta name="author" content="Jeremías Davison">
+  <link rel="stylesheet" href="styles/site.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Source+Sans+3:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+  <header>
+    <div class="header-inner">
+      <a class="logo" href="index.html">AI Pulse</a>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <nav>
+        <ul id="nav-menu">
+          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="tools.html">Tools</a></li>
+          <li><a href="newsletter.html">Newsletter</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="section-header">
+      <h2>Latest Stories</h2>
+      <span id="article-count"></span>
+    </div>
+
+    <div class="filter-bar" id="filter-bar">
+      <button class="filter-btn active" data-category="all">All</button>
+      <button class="filter-btn" data-category="models">Models</button>
+      <button class="filter-btn" data-category="research">Research</button>
+      <button class="filter-btn" data-category="policy">Policy</button>
+      <button class="filter-btn" data-category="tools">Tools</button>
+      <button class="filter-btn" data-category="safety">Safety</button>
+    </div>
+
+    <div id="articles-grid"></div>
+
+    <div class="promo-banner">
+      <img
+        src="images/banner.svg"
+        alt="Subscribe to the AI Pulse newsletter"
+        width="900"
+        height="80"
+        loading="lazy"
+      >
+      <p><a href="newsletter.html">Subscribe to the newsletter &rarr;</a></p>
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <p>&copy; 2026 AI Pulse &ndash; Jeremías Davison &ndash; Buenos Aires, Argentina</p>
+      <p><a href="references.html">References &amp; Sources</a></p>
+    </div>
+  </footer>
+
+  <script src="scripts/main.js"></script>
+
+</body>
+
+</html>

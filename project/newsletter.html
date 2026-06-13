@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Newsletter – AI Pulse</title>
+  <meta name="description" content="Subscribe to the AI Pulse newsletter and get the most important AI stories delivered to your inbox every week.">
+  <meta name="author" content="Jeremías Davison">
+  <link rel="stylesheet" href="styles/site.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Source+Sans+3:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+  <header>
+    <div class="header-inner">
+      <a class="logo" href="index.html">AI Pulse</a>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <nav>
+        <ul id="nav-menu">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="tools.html">Tools</a></li>
+          <li><a href="newsletter.html" class="active">Newsletter</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="form-section">
+      <h1>Stay in the Loop</h1>
+      <p>Get the most important AI stories delivered to your inbox every week. No spam — just signal.</p>
+
+      <div class="form-success" id="form-success">
+        <strong>You're subscribed!</strong> Watch your inbox for the next edition of AI Pulse.
+      </div>
+
+      <form id="newsletter-form" novalidate>
+
+        <div class="form-group">
+          <label for="name">Full Name</label>
+          <input type="text" id="name" name="name" placeholder="Your name" required>
+          <span class="form-error" id="name-error">Please enter your name (at least 2 characters).</span>
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email Address</label>
+          <input type="email" id="email" name="email" placeholder="you@example.com" required>
+          <span class="form-error" id="email-error">Please enter a valid email address.</span>
+        </div>
+
+        <div class="form-group">
+          <label for="frequency">Delivery Frequency</label>
+          <select id="frequency" name="frequency">
+            <option value="weekly">Weekly digest</option>
+            <option value="daily">Daily briefing</option>
+            <option value="breaking">Breaking news only</option>
+          </select>
+        </div>
+
+        <fieldset>
+          <legend>Topics I care about</legend>
+          <div class="checkbox-group">
+            <label class="checkbox-item">
+              <input type="checkbox" name="topics" value="models" checked>
+              <span>Model releases &amp; benchmarks</span>
+            </label>
+            <label class="checkbox-item">
+              <input type="checkbox" name="topics" value="research">
+              <span>Research papers</span>
+            </label>
+            <label class="checkbox-item">
+              <input type="checkbox" name="topics" value="policy">
+              <span>Policy &amp; regulation</span>
+            </label>
+            <label class="checkbox-item">
+              <input type="checkbox" name="topics" value="tools">
+              <span>New AI tools</span>
+            </label>
+            <label class="checkbox-item">
+              <input type="checkbox" name="topics" value="safety">
+              <span>AI safety &amp; alignment</span>
+            </label>
+          </div>
+        </fieldset>
+
+        <button type="submit" class="btn">Subscribe</button>
+
+      </form>
+
+      <div class="saved-section" id="saved-section">
+        <h3>Your Current Preferences</h3>
+        <div class="saved-info" id="saved-info"></div>
+        <button class="btn btn-outline" id="clear-btn" style="margin-top: 0.75rem; font-size: 0.85rem;">
+          Clear saved preferences
+        </button>
+      </div>
+
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <p>&copy; 2026 AI Pulse &ndash; Jeremías Davison &ndash; Buenos Aires, Argentina</p>
+      <p><a href="references.html">References &amp; Sources</a></p>
+    </div>
+  </footer>
+
+  <script src="scripts/newsletter.js"></script>
+
+</body>
+
+</html>
